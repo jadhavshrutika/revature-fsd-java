@@ -10,7 +10,11 @@ public class MainMenu extends Menu {
 
 	public MainMenu(String name) {
 		super(name);
-		addMenuItem("Register new Customer");
+		System.out.println("Hello! ");
+		System.out.println("Welcome in Happy Saving Bank :)");
+	
+	
+		addMenuItem("Register as a new Customer");
 		addMenuItem("Login as Customer");
 		addMenuItem("Login as Employee");
 		addMenuItem("Exit");
@@ -21,14 +25,14 @@ public class MainMenu extends Menu {
 		Scanner scanner = new Scanner(System.in);
 		switch (selection) {
 		case 1:
-			System.out.println("\n===");
-			System.out.println("Register new customer");
-			System.out.println("====\n");
+			System.out.println("--------------------------");
+			System.out.println("Register as a new customer");
+			System.out.println("-------------------------\n");
 			
-			System.out.print("First Name: ");
+			System.out.print( "Enter your First Name: ");
 			String firstName = scanner.nextLine();
 			
-			System.out.print("Last Name: ");
+			System.out.print("Enter your Last Name: ");
 			String lastName = scanner.nextLine();
 
 			System.out.print("Email: ");
@@ -38,7 +42,7 @@ public class MainMenu extends Menu {
 			String password = scanner.nextLine();
 			
 			DataManager.addCustomer(new Customer(firstName, lastName, email, password));
-			System.out.println("Customer added successfully.");
+			System.out.println(firstName+" "+ lastName+" "+ "your registration is sucessfully completed :)");
 			displayMenuAndCaptureSelection();
 			break;
 		case 2:
